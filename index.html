@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>電車時刻案内</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="headerTitle">電車時刻案内</div>
+    <div class="headerSubtitle">Train Information</div>
+  </header>
+
+  <main class="page">
+
+    <section class="trainPageContent">
+
+      <div class="trainTitle">
+        電車
+      </div>
+
+      <!-- 上り・下り -->
+      <div class="trainDirectionButtons">
+
+        <div class="trainDirectionGroup">
+          <button
+            id="upButton"
+            class="trainDirection activeTrainDirection"
+            onclick="selectTrainDirection('up')">
+            上り
+          </button>
+
+          <div class="trainDirectionInfo">
+            八王子方面
+          </div>
+        </div>
+
+        <div class="trainDirectionGroup">
+          <button
+            id="downButton"
+            class="trainDirection"
+            onclick="selectTrainDirection('down')">
+            下り
+          </button>
+
+          <div class="trainDirectionInfo">
+            川越方面
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 次の電車 -->
+      <div class="nextTrainText">
+        次の電車
+      </div>
+
+      <div id="nextTrainTime" class="nextTrainTime">
+        --:--
+      </div>
+
+      <div id="nextTrainDestination" class="nextTrainDestination">
+        -
+      </div>
+
+      <!-- 現在時刻 -->
+      <div id="currentTime" class="trainCurrentTime">
+        現在時刻は --:-- です
+      </div>
+
+      <!-- 時刻表 -->
+      <div id="trainSchedule" class="trainSchedule">
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
